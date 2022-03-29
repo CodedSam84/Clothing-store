@@ -1,5 +1,5 @@
 import './App.scss';
-import CategoriesWrapper from './components/category-item/category-item.component';
+import CardsContainer from './components/cards-container/cards-container.component';
 
 const App = () => {
   const categoryList = [
@@ -37,7 +37,7 @@ const App = () => {
   
   return (
     <div className="App">
-      <CategoriesWrapper categoryList={categoryList}/>
+      <CardsContainer categoryList={categoryList}/>
     </div>
   )
 };
