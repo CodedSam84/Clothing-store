@@ -2,7 +2,7 @@ import React from 'react';
 import "./card.component.scss";
 
 const CardComponent = ({category}) => {
-  const {id, title, imageUrl} = category;
+  const {title, imageUrl} = category;
 
   return(
     <div className="category-container">
@@ -12,7 +12,7 @@ const CardComponent = ({category}) => {
         <p>shop now</p>
       </div>
     </div>
-  )
+  );
   
 };
 
