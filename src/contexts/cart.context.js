@@ -69,9 +69,3 @@ export const CartProvider = ({children}) => {
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }
-
-// Create storage for cart items
-// Get product from product card
-// Transform to cart item
-// Check if cart item already present in storage(if yes, increase count, otherwise add item to storage)
-// Return updated cart items in storage
