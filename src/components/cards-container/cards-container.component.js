@@ -12,7 +12,6 @@ const CardsContainer = ({categoryList}) => {
           return (
             <CardComponent category={category} key={id}/>
           )
-          
         }
       )
       }
