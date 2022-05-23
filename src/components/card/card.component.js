@@ -1,17 +1,20 @@
 import React from 'react';
-import "./card.component.scss";
+import { useNavigate } from 'react-router-dom';
+import { BackgroundImage, Card, CategoryBodyContainer } from './card.styles.js';
 
 const CardComponent = ({category}) => {
-  const {title, imageUrl} = category;
+  const { title, imageUrl, route } = category;
+  const navigateCategory = useNavigate();
+  const categoryRouteHandler = () => navigateCategory(route);
 
   return(
-    <div className="card">
-      <div className="background-image" style={{ backgroundImage: `url(${imageUrl})`}}/>
-      <div className="category-body-container">
+    <Card onClick={categoryRouteHandler}>
+      <BackgroundImage imageUrl= {imageUrl}/>
+      <CategoryBodyContainer>
         <h2>{title}</h2>
         <p>shop now</p>
-      </div>
-    </div>
+      </CategoryBodyContainer>
+    </Card>
   );
   
 };

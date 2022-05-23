@@ -1,4 +1,4 @@
-import Button from "../button/button.component";
+import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 import "./product-card.styles.scss";
 
 import { CartContext } from "../../contexts/cart.context";
@@ -18,7 +18,7 @@ const ProductCard = ({product}) => {
         <span>{name}</span>
         <span>{price}</span>
       </div>
-      <Button buttonType="inverted">Add to cart</Button>
+      <Button buttonType={BUTTON_TYPE_CLASSES.inverted}>Add to cart</Button>
     </div>
   );
 };
